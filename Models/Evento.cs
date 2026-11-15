@@ -31,6 +31,15 @@ public class Evento
         }
     }
 
+    // Exibe a duração total sem reiniciar a contagem a cada 24 horas.
+    public string DuracaoFormatada
+    {
+        get
+        {
+            return $"{(int)Duracao.TotalHours:D2}h {Duracao.Minutes:D2}min";
+        }
+    }
+
     // Calcula o custo total do evento.
     public decimal CustoTotal
     {
