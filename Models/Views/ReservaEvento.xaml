@@ -1,0 +1,258 @@
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CadastroEventos.Views.ReservaEvento"
+    Title="Cadastrar Evento"
+    BackgroundColor="#F5F8FF">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20"
+            Spacing="18">
+
+            <!-- Cabeçalho -->
+            <VerticalStackLayout
+                Spacing="6"
+                Margin="0,5,0,5">
+
+                <Label
+                    Text="NOVO EVENTO"
+                    FontSize="12"
+                    FontAttributes="Bold"
+                    CharacterSpacing="3"
+                    TextColor="#4296FF"
+                    HorizontalOptions="Center"/>
+
+                <Label
+                    Text="Vamos organizar&#10;algo incrível?"
+                    FontSize="29"
+                    FontAttributes="Bold"
+                    TextColor="#152C70"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    LineHeight="1.1"/>
+
+                <Label
+                    Text="Preencha os detalhes do seu evento."
+                    FontSize="14"
+                    TextColor="#687895"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+
+            <!-- Informações gerais -->
+            <Border
+                BackgroundColor="White"
+                Stroke="#E3ECFF"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20"
+                Padding="18">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="✦  Informações gerais"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="#152C70"/>
+
+                    <Label Text="Nome do evento"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#4B5D78"/>
+
+                    <Entry
+                        Placeholder="Digite o nome do evento"
+                        Text="{Binding Nome}"
+                        BackgroundColor="#F5F8FF"
+                        TextColor="#152C70"
+                        PlaceholderColor="#9AA8C0"
+                        HeightRequest="48"/>
+
+                    <Label Text="Local do evento"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#4B5D78"/>
+
+                    <Entry
+                        Placeholder="Digite o local"
+                        Text="{Binding Local}"
+                        BackgroundColor="#F5F8FF"
+                        TextColor="#152C70"
+                        PlaceholderColor="#9AA8C0"
+                        HeightRequest="48"/>
+
+                    <Label Text="Número de participantes"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#4B5D78"/>
+
+                    <Entry
+                        Placeholder="Quantidade de participantes"
+                        Keyboard="Numeric"
+                        Text="{Binding NumeroParticipantes, Mode=TwoWay}"
+                        BackgroundColor="#F5F8FF"
+                        TextColor="#152C70"
+                        PlaceholderColor="#9AA8C0"
+                        HeightRequest="48"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Data e horário -->
+            <Border
+                BackgroundColor="White"
+                Stroke="#E3ECFF"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20"
+                Padding="18">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="◷  Data e horário"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="#152C70"/>
+
+                    <Label Text="Data de início"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#4B5D78"/>
+
+                    <Border
+                        BackgroundColor="#F5F8FF"
+                        Stroke="#E3ECFF"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="8,2">
+
+                        <DatePicker
+                            x:Name="DataInicioPicker"
+                            Date="{Binding DataInicio}"
+                            Format="dd/MM/yyyy"
+                            BackgroundColor="Transparent"
+                            TextColor="#152C70"
+                            DateSelected="DataInicio_DateSelected"/>
+                    </Border>
+
+                    <Label Text="Horário de início"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#4B5D78"/>
+
+                    <Border
+                        BackgroundColor="#F5F8FF"
+                        Stroke="#E3ECFF"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="8,2">
+
+                        <TimePicker
+                            x:Name="HorarioInicioPicker"
+                            Time="{Binding HorarioInicio}"
+                            Format="HH:mm"
+                            BackgroundColor="Transparent"
+                            TextColor="#152C70"/>
+                    </Border>
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#E3ECFF"
+                        Margin="0,5"/>
+
+                    <Label Text="Data de término"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#4B5D78"/>
+
+                    <Border
+                        BackgroundColor="#F5F8FF"
+                        Stroke="#E3ECFF"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="8,2">
+
+                        <DatePicker
+                            x:Name="DataTerminoPicker"
+                            Date="{Binding DataTermino}"
+                            Format="dd/MM/yyyy"
+                            BackgroundColor="Transparent"
+                            TextColor="#152C70"/>
+                    </Border>
+
+                    <Label Text="Horário de término"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#4B5D78"/>
+
+                    <Border
+                        BackgroundColor="#F5F8FF"
+                        Stroke="#E3ECFF"
+                        StrokeShape="RoundRectangle 12"
+                        Padding="8,2">
+
+                        <TimePicker
+                            x:Name="HorarioTerminoPicker"
+                            Time="{Binding HorarioTermino}"
+                            Format="HH:mm"
+                            BackgroundColor="Transparent"
+                            TextColor="#152C70"/>
+                    </Border>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Custo -->
+            <Border
+                BackgroundColor="White"
+                Stroke="#E3ECFF"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 20"
+                Padding="18">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label
+                        Text="R$  Investimento"
+                        FontSize="17"
+                        FontAttributes="Bold"
+                        TextColor="#152C70"/>
+
+                    <Label Text="Custo por participante"
+                           FontSize="13"
+                           FontAttributes="Bold"
+                           TextColor="#4B5D78"/>
+
+                    <Entry
+                        x:Name="CustoEntry"
+                        Placeholder="R$ 0,00"
+                        Keyboard="Numeric"
+                        BackgroundColor="#F5F8FF"
+                        TextColor="#152C70"
+                        PlaceholderColor="#9AA8C0"
+                        HeightRequest="48"
+                        TextChanged="CustoEntry_TextChanged"/>
+
+                    <Label
+                        Text="Informe o valor individual de participação."
+                        FontSize="12"
+                        TextColor="#9AA8C0"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Continuar -->
+            <Button
+                Text="Continuar  →"
+                BackgroundColor="#4296FF"
+                TextColor="White"
+                FontSize="16"
+                FontAttributes="Bold"
+                CornerRadius="16"
+                HeightRequest="55"
+                Margin="0,3,0,15"
+                Clicked="Continuar_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

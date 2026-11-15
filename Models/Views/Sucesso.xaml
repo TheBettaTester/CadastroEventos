@@ -1,0 +1,116 @@
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CadastroEventos.Views.Sucesso"
+    Title="Sucesso"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F5F8FF">
+
+    <ScrollView>
+        <Grid
+            Padding="25"
+            VerticalOptions="Center">
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#E3ECFF"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 28"
+                Padding="25"
+                VerticalOptions="Center">
+
+                <VerticalStackLayout
+                    Spacing="20"
+                    VerticalOptions="Center">
+
+                    <!-- Ícone de sucesso -->
+                    <Border
+                        BackgroundColor="#EAF8F0"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 50"
+                        WidthRequest="115"
+                        HeightRequest="115"
+                        Padding="15"
+                        HorizontalOptions="Center">
+
+                        <Label
+                            Text="✓"
+                            FontSize="65"
+                            FontAttributes="Bold"
+                            TextColor="#269B69"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Center"/>
+                    </Border>
+
+                    <!-- Mensagem -->
+                    <Label
+                        Text="TUDO PRONTO!"
+                        FontSize="12"
+                        FontAttributes="Bold"
+                        CharacterSpacing="3"
+                        TextColor="#4296FF"
+                        HorizontalOptions="Center"/>
+
+                    <Label
+                        Text="Evento cadastrado!"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        TextColor="#152C70"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Label
+                        Text="Seu evento foi registrado com sucesso. Agora é só preparar tudo para esse momento especial!"
+                        FontSize="15"
+                        TextColor="#687895"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        LineHeight="1.3"/>
+
+                    <BoxView
+                        WidthRequest="55"
+                        HeightRequest="4"
+                        Color="#FFCE70"
+                        CornerRadius="2"
+                        HorizontalOptions="Center"/>
+
+                    <!-- Página inicial -->
+                    <Button
+                        Text="Página Inicial"
+                        BackgroundColor="#4296FF"
+                        TextColor="White"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="16"
+                        HeightRequest="55"
+                        Clicked="Inicio_Clicked"/>
+
+                    <!-- Meus eventos -->
+                    <Button
+                        Text="Meus Eventos"
+                        BackgroundColor="#EEF5FF"
+                        TextColor="#152C70"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="16"
+                        HeightRequest="55"
+                        BorderColor="#D5E5FF"
+                        BorderWidth="1"
+                        Clicked="MeusEventos_Clicked"/>
+
+                    <Label
+                        Text="Obrigado por escolher o Happy Eventos! ✦"
+                        FontSize="12"
+                        TextColor="#9AA8C0"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"/>
+
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

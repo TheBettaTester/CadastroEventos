@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CadastroEventos.Views.Inicio"
+    Title="Início"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F5F8FF">
+
+    <ScrollView>
+        <Grid
+            Padding="25"
+            VerticalOptions="Center">
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#E3ECFF"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 28"
+                Padding="25"
+                VerticalOptions="Center">
+
+                <VerticalStackLayout
+                    Spacing="20"
+                    VerticalOptions="Center">
+
+                    <!-- Ícone -->
+                    <Border
+                        BackgroundColor="#EEF5FF"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 28"
+                        Padding="20"
+                        HorizontalOptions="Center">
+
+                        <Image
+                            Source="calendario.png"
+                            WidthRequest="115"
+                            HeightRequest="115"
+                            Aspect="AspectFit"/>
+                    </Border>
+
+                    <!-- Identidade -->
+                    <Label
+                        Text="HAPPY EVENTOS"
+                        FontSize="13"
+                        FontAttributes="Bold"
+                        CharacterSpacing="3"
+                        TextColor="#4296FF"
+                        HorizontalOptions="Center"/>
+
+                    <Label
+                        Text="Seus eventos,&#10;do seu jeito!"
+                        FontSize="32"
+                        FontAttributes="Bold"
+                        TextColor="#152C70"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        LineHeight="1.1"/>
+
+                    <Label
+                        Text="Organize seus eventos de forma simples e deixe cada momento especial!"
+                        FontSize="15"
+                        TextColor="#687895"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        LineHeight="1.3"/>
+
+                    <!-- Detalhe decorativo -->
+                    <BoxView
+                        WidthRequest="55"
+                        HeightRequest="4"
+                        Color="#FFCE70"
+                        CornerRadius="2"
+                        HorizontalOptions="Center"/>
+
+                    <!-- Botão cadastrar -->
+                    <Button
+                        Text="Cadastrar Evento"
+                        BackgroundColor="#4296FF"
+                        TextColor="White"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="16"
+                        HeightRequest="55"
+                        Clicked="CadastrarEvento_Clicked"/>
+
+                    <!-- Botão meus eventos -->
+                    <Button
+                        Text="Meus Eventos"
+                        BackgroundColor="#EEF5FF"
+                        TextColor="#152C70"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        CornerRadius="16"
+                        HeightRequest="55"
+                        BorderColor="#D5E5FF"
+                        BorderWidth="1"
+                        Clicked="MeusEventos_Clicked"/>
+
+                    <Label
+                        Text="Feito para celebrar momentos especiais ✦"
+                        FontSize="12"
+                        TextColor="#9AA8C0"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"/>
+
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

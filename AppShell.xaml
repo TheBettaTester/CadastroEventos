@@ -1,0 +1,13 @@
+<Shell
+    x:Class="CadastroEventos.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:CadastroEventos.Views"
+    Title="Cadastro de Eventos">
+
+    <ShellContent
+        Title="Início"
+        ContentTemplate="{DataTemplate views:Inicio}"
+        Route="Inicio" />
+
+</Shell>
