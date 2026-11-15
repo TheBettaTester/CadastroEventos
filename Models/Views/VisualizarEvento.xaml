@@ -160,7 +160,7 @@
                             VerticalOptions="Center"/>
                     </Grid>
 
-                    <!-- Duração -->
+                    <!-- Duração corrigida -->
                     <Grid ColumnDefinitions="*,Auto">
                         <Label
                             Text="Duração"
@@ -170,7 +170,7 @@
 
                         <Label
                             Grid.Column="1"
-                            Text="{Binding Duracao, StringFormat='{0:hh\\:mm}'}"
+                            Text="{Binding DuracaoFormatada}"
                             FontSize="14"
                             FontAttributes="Bold"
                             TextColor="#152C70"
